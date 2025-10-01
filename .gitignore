@@ -1,0 +1,8 @@
+.conda
+.vscode
+build
+runs
+_res
+_doc
+__pycache__
+*.pt
