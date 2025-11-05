@@ -61,6 +61,7 @@ Yolo11ClsRetCode Yolo11Cls::RunYolo11Cls(const unsigned char* in_img, int in_wid
     infer_request.infer();
 
     /// Get output tensors
+    ov::Tensor out_tensor = infer_request.get_output_tensor();
     //cv::Tensor out_detect_tensor = infer_request.get_output_tensor(0);
     //cv::Tensor out_proto_tensor = infer_request.get_output_tensor(1);
     //cv::Mat detect_buf(static_cast<int>(out_detect_shape[1]), static_cast<int>(out_detect_shape[2]), CV_32FC1, out_detect_tensor.data<float>()); // [37x1344]
